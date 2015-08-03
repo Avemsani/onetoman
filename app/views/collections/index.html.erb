@@ -1,0 +1,29 @@
+<h1>Collections</h1>
+
+<p><a href="/new_collection">Add a New Collection</a></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Bookmark</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @collections.each do |collection| %>
+    <tr>
+          <td><%= collection.user_id %></td>
+          <td><%= collection.bookmark_id %></td>
+          <td><a href="/collections/<%= collection.id %>">Show</a>
+        </td>
+      <td><a href="/collections/<%= collection.id %>/edit">Edit</a></td>
+      <td><a href="/collections/<%= collection.id %>/destroy">Destroy</a></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+

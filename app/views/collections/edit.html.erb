@@ -1,0 +1,17 @@
+<h1>Editing Collection #<%= @collection.id %></h1>
+
+<form action="/collections/<%= @collection.id %>/update">
+  <div>
+    <label for="user_id">user_id</label><br />
+    <input id="user_id" name="user_id" value="<%= @collection.user_id  %>" type="text" />
+  </div>
+  <div>
+    <label for="bookmark_id">bookmark_id</label><br />
+    <input id="bookmark_id" name="bookmark_id" value="<%= @collection.bookmark_id  %>" type="text" />
+  </div>
+  <div>
+    <input type="submit">
+  </div>
+</form>
+
+
